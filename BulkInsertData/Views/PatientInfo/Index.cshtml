@@ -1,0 +1,43 @@
+﻿@{
+
+    ViewData["Title"] = "Upload  Data";
+
+}
+
+@using (Html.BeginForm("Index", "PatientInfo", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+
+{
+
+    <div class="row">
+
+
+        <div class="text-center">
+
+            <h4 class="font-weight-bold">Asp.net MVC bulk insert by upload file</h4>
+            <p>you can insert 1 million data in wink </p>
+            <hr/>
+            <br>
+
+
+           
+            <br>
+
+            <input type="file" name="formFile" />
+            <input type="submit" value="Upload" />
+
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="row">
+        <div class="text-center">
+
+            <p style="color:red;font-weight:bold;">
+
+                @ViewBag.Message
+
+            </p>
+
+        </div>
+    </div>
+}
